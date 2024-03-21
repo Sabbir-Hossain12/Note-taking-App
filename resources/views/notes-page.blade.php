@@ -93,7 +93,7 @@
     </div>
 
 
-    {{--  Update Modal  --}}
+    {{--  Delete Modal  --}}
 
     <div class="modal animated zoomIn" id="delete-modal">
         <div class="modal-dialog modal-dialog-centered">
@@ -152,7 +152,7 @@
                         $('#updateID').val(id);
                         $('#update-modal').modal('show');
 
-                        //await fillCandidateData()
+                        await fillNoteData()
 
                     })
 
@@ -181,12 +181,72 @@
 
        async function noteDelete()
         {
+            let  id = $('#deleteID').val();
+                try {
+                        let res= await axios.delete(`/notes/${id}`);
 
+                        if (res.data.message === 'success') {
+                            successToast('Note Deleted')
+                            $('#delete-modal').modal('hide');
+                            await noteList();
+
+                        }
+                        else
+                        {
+                            errorToast('Something Went Wrong')
+                        }
+                }
+                catch (e)
+                {
+                    console.log(e.message)
+                }
         }
 
+       async function fillNoteData()
+       {
+           let id=$('#updateID').val();
+           try {
+               let res= await axios.get(`/notes/${id}`)
+
+               if (res.data.message==='success')
+               {
+                   $('#nTitle').val(res.data.data['title']);
+                   $('#nContent').val(res.data.data['content']);
+               }
+               else
+               {
+                   errorToast('something went wrong')
+               }
+           }
+           catch (e)
+           {
+
+           }
+       }
        async function updateNote()
        {
+           let id=$('#updateID').val();
+           let title=$('#nTitle').val();
+           let content=$('#nContent').val();
 
+           try {
+               let res= await axios.put(`/notes/${id}`,{'title': title, 'content': content})
+
+               if (res.data.message==='success')
+               {
+                   successToast('Note Updated')
+                   $('#update-modal').modal('hide');
+                   await noteList();
+               }
+               else
+               {
+                   errorToast('something went wrong')
+               }
+           }
+           catch (e)
+           {
+
+           }
        }
     </script>
 @endsection

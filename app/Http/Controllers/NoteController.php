@@ -82,7 +82,7 @@ class NoteController extends Controller
         if (!$data) {
             return response()->json(['message' => 'No data found'], 404);
         }
-        return response()->json(['data' => $data], 200);
+        return response()->json(['data' => $data,'message' => 'success'], 200);
 
     }
 
@@ -103,11 +103,11 @@ class NoteController extends Controller
 
         try {
             Note::where('id',$id)->update([
-                'title' => $request->title,
-                'content' => $request->content
+                'title' => $request->input('title'),
+                'content' => $request->input('content')
             ]);
 
-            return response()->json(['message' => 'Note updated successfully'], 200);
+            return response()->json(['message' => 'success'], 200);
         }
         catch (Exception $exception)
         {
@@ -124,7 +124,7 @@ class NoteController extends Controller
 
         try {
             Note::where('id',$id)->delete();
-            return response()->json(['message' => 'Note deleted successfully'], 200);
+            return response()->json(['message' => 'success'], 200);
         }
         catch (Exception $exception)
         {
