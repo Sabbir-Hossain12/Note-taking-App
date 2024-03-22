@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home-page');
 });
 
 Route::get('/dashboard', function () {
@@ -23,5 +23,7 @@ require __DIR__.'/auth.php';
 Route::resource('notes', NoteController::class);
 Route::get('/note/search/{content}',[NoteController::class,'search'])->name('notes.search');
 
-Route::view('/notes-list','notes-page')->name('notes.page');
+Route::view('/notes-list','notes-page')->middleware('auth')->name('notes.page');
 Route::view('/note-create','note-create')->name('notes.create');
+
+Route::get('/notes-count',[NoteController::class,'noteCount'])->name('notes.count');

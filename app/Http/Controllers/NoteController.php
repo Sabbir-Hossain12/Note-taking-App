@@ -16,7 +16,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $data= Note::with('user')->get();
+        $data= Note::where('user_id', Auth::id())->with('user')->get();
 
         foreach ($data as $single) {
 
@@ -31,6 +31,12 @@ class NoteController extends Controller
         if (!$data) {
             return response()->json(['message' => 'No data found'], 404);
         }
+        return response()->json(['data' => $data], 200);
+    }
+    public function noteCount()
+    {
+
+        $data= Note::where('user_id', Auth::id())->count();
         return response()->json(['data' => $data], 200);
     }
 

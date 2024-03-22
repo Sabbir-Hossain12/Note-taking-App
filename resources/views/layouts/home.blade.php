@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title>Dashboard Template · Bootstrap v5.2</title>
+    <title>Note App</title>
     <link href="{{asset('assets/css/fontawesome.css')}}" rel="stylesheet" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
@@ -90,8 +90,9 @@
     </button>
     <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
     <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="#">{{Auth::user()->name ?? 'Guest'}}</a>
+        <div class="nav-item text-nowrap d-flex">
+            <a class="nav-link px-3" href="#">Welcome, {{Auth::user()->name ?? 'Guest'}}</a>
+            <a class="nav-link px-3" href="{{route('logout')}}">Sign out</a>
         </div>
     </div>
 </header>

@@ -21,7 +21,42 @@
 
 @section('contents')
 
-    hi
+    <div class="row gap-4">
+
+        <div class="col-lg-2 ">
+
+            <div class="card w-100">
+
+                <div class="card-body">
+                    <h5 class="fw-light card-title">
+                       Total Notes
+                    </h5>
+                    <p class="card-text" id="nCount"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+        (async ()=>
+        {
+            await noteCount();
+        })()
+
+
+        async function noteCount()
+        {
+            let res=  await axios.get('/notes-count');
+            $('#nCount').text(res.data.data);
+        }
+
+    </script>
+
 @endsection
 
 
