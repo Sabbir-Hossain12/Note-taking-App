@@ -1,66 +1,270 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+<h2 align="center"> Note App</h2>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  <p align="center">our Note-taking application provides users with a seamless platform to organize 
+their thoughts, ideas, and reminders. With an intuitive interface and robust functionality, users can effortlessly create,
+edit, and manage their notes to stay organized and productive.</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+</div>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li><a href="#product-requirement-and-roadmap">Product Requirement and Roadmap
+</a></li>
+    <li><a href="#database-design">Database Design</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+<!-- ABOUT THE PROJECT -->
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## About The Project
 
-## Contributing
+<img src="public/assets/images/ss/ss1.png"/>
+<img src="public/assets/images/ss/ss2.png"/>
+<img src="public/assets/images/ss/ss3.png"/>
+<img src="public/assets/images/ss/ss4.png"/>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+A simple “Note-taking application” using Laravel. The application should
+allow users to input their daily notes and manage them.
 
-## Code of Conduct
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Built With
 
-## Security Vulnerabilities
+List of notable Technologies used to build this applications.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
 
-## License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+### Prerequisites
+
+* Laravel 11
+* PHP 8.2.4+
+* Composer (dependency manager for PHP)
+* Database (MySQL/ PostgreSQL/ SQLite/ SQL Server)
+* Git
+
+### Installation
+
+Please Follow the steps to install this project Locally.
+
+#### 1. Clone the repo
+
+Open your terminal and navigate to the directory where you want to install the Laravel project.
+Then run the following command:
+
+   ```sh
+   git clone https://github.com/Sabbir-Hossain12/Note-taking-App.git
+   ```
+
+#### 2. Navigate to Project Directory
+
+Move into the project directory:
+
+   ```sh
+   cd Note-taking-App
+   ```
+
+#### 3. Install Dependencies
+
+Once you are in the project directory, use Composer to install the required dependencies:
+
+   ```sh
+   composer install
+   ```
+
+#### 4. Create Environment File
+
+Laravel requires an environment file for configuration. Duplicate the .env.example file and save it as .env:
+
+   ```sh
+   cp .env.example .env
+   ```
+
+#### 5. Generate Application Key
+
+Run the following command to generate a unique application key:
+
+   ```sh
+php artisan key:generate
+   ```
+
+#### 6. Run Migrations
+
+Use the following command to run database migrations:
+
+   ```sh
+  php artisan migrate
+   ```   
+
+#### 7. run the database seeders for dummy data
+
+Use the following command to run database seeders:
+
+   ```sh
+  php artisan db:seed
+   ```   
+
+
+#### 8. Serve the Application
+
+You can use Laravel's built-in development server to run the application locally.
+Execute the following command:
+
+```sh
+php artisan serve
+```   
+
+This will start a development server, and you can access your Laravel application at http://127.0.0.1:8000 in your web
+browser.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+<!-- ROADMAP -->
+
+## Product Requirement and Roadmap
+
+1. User Authentication:
+   - Implement user registration, login, and logout functionalities.
+   - Ensure secure authentication for accessing user-specific notes.
+2. Note Management:
+   - Allow users to create, edit, and delete notes.
+   - Each note should have a title, content, creation date, and last modified date.
+3. Implement CRUD operations for managing notes.
+   - Search Functionality:
+   - Implement a search feature for users to find notes based on titles or content.
+4. User interface
+   - Utilize the provided Bootstrap template from Bootstrap Examples for designing
+   the user interface.
+   - Design an intuitive and user-friendly interface for creating, viewing, and
+   managing notes.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+<!-- CONTACT -->
+
+## Contact
+
+Sabbir Hossain- h.sabbir36@yahoo.com
+
+Project Link: https://github.com/Sabbir-Hossain12/Note-taking-App
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+i would like to give credit to some of the resources down below that helped my project.
+
+* [Font Awesome](https://fontawesome.com)
+* [Bootstrap](https://getbootstrap.com/)
+* [Data Table](https://datatables.net/)
+* [Axios]()
+* [Toastify JS]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+
+[linkedin-url]: https://linkedin.com/in/othneildrew
+
+[product-screenshot]: images/screenshot.png
+
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+
+[Next-url]: https://nextjs.org/
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+
+[React-url]: https://reactjs.org/
+
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+
+[Vue-url]: https://vuejs.org/
+
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+
+[Angular-url]: https://angular.io/
+
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+
+[Svelte-url]: https://svelte.dev/
+
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+
+[Laravel-url]: https://laravel.com
+
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+
+[Bootstrap-url]: https://getbootstrap.com
+
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+
+[JQuery-url]: https://jquery.com 
