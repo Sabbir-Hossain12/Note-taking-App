@@ -1,58 +1,46 @@
 @extends('layouts.home')
 
 @section('contents')
-
-    <div class="container-fluid pt-4">
-
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between ">
-                        <div >
-                            <h4 class="card-title">Note List</h4>
-                            <p class="card-title-desc">In This Section we will find Job list and Create Jobs.
-                            </p>
-                        </div>
-                        <div><a href="{{url('/note-create')}}"><button class="btn btn-primary">Create Notes</button></a></div>
-                    </div>
-                    <div class="card-body">
-
-                        <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <table id="tableData"
-                                           class="table table-bordered dt-responsive nowrap w-100 dataTable no-footer dtr-inline dataTable-wrapper"
-                                           style="width: 1573px;">
-                                        <thead>
-                                        <tr>
-                                            <th>SN</th>
-                                            <th>Note Title</th>
-                                            <th>Content</th>
-                                            <th>Creation Date</th>
-                                            <th>last modified date</th>
-
-                                            <th>Action
-                                            </th>
-
-                                        </tr>
-                                        </thead>
 
 
-                                        <tbody id="tableList">
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+            <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Note List</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                       <a href="{{route('notes.create')}}">    <button type="button" class="btn btn-dark btn-outline-secondary text-light">Create Notes</button></a>
 
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
+
+
+{{--                <h2>Section title</h2>--}}
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm table-bordered" id="tableData">
+                        <thead>
+                        <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">title</th>
+                            <th scope="col">content</th>
+                            <th scope="col">Creation</th>
+                            <th scope="col">Last Modified</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableList">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
 
 {{--  Update Modal  --}}
     <div class="modal animated zoomIn" id="update-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -128,8 +116,8 @@
                     $('#tableList').empty();
                     jobList.forEach(function (item, i) {
                         let foreach = ` <tr class="odd">
-                                            <td class="dtr-control sorting_1" tabindex="0">${i + 1}</td>
-                                            <td class="dtr-control sorting_1" tabindex="0">${item['title']}</td>
+                                            <td >${i + 1}</td>
+                                            <td >${item['title']}</td>
                                             <td>${item['content']}</td>
                                             <td>${item['formatted_created_at']}</td>
                                             <td>${item['formatted_modified_at']}</td>
