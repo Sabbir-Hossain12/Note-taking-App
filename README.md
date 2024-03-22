@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 
-
+<img src="public/assets/images/ss/ss.png"/>
 <h2 align="center"> Note App</h2>
 
   <p align="center">our Note-taking application provides users with a seamless platform to organize 
@@ -173,7 +173,15 @@ browser.
    - Design an intuitive and user-friendly interface for creating, viewing, and
    managing notes.
 
+### Features
 
+- Laravel Breeze for Authentication(login,registration,forget password,logout)
+- Dynamic User Name on top right corner of Dashboard. 
+- Dynamic Dashboard shows the total number of Notes for the Specific User.
+- List of Total Notes for the specific User managed by Jquery Datatable plugin.
+- Edit, Delete, Search, pagination, custom entry and Create Notes Dynamically Using Ajax architecture(axios library).
+- user-friendly interface for creating, viewing, and
+  managing notes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
